@@ -9,9 +9,9 @@ import javax.persistence.*;
 public class UserEntity {
     @Id
     @Column(name = "userid")
-    private  String userid;
+    private  String userid;//actions
     @Column(name = "username")
-    private String username;
+    private String username;//actions
     @Column(name = "password")
     private String password;
     @Column(name = "firtname",columnDefinition = "NVARCHAR(MAX)")
@@ -21,12 +21,12 @@ public class UserEntity {
     @Column(name = "phone")
     private String phone;
     @Column(name = "email")
-    private String email;
+    private String email;//actions
     @Column(name = "images")
     private String images;
     @ManyToOne
     @JoinColumn(name = "roleid")
-    private RoleEntity roleid;
+    private RoleEntity roleid;//actions
 
     public String getUserid() {
         return userid;

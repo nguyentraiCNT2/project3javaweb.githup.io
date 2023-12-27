@@ -8,7 +8,7 @@ public class OrderdetailsDTO {
     private Long productsid;
     private Long totalamount;
     private BigDecimal unitprice;
-    private ShipDTO shipid;
+    private Long shipid;
 
     public Long getOrderdetailid() {
         return orderdetailid;
@@ -51,11 +51,11 @@ public class OrderdetailsDTO {
         this.unitprice = unitprice;
     }
 
-    public ShipDTO getShipid() {
+    public Long getShipid() {
         return shipid;
     }
 
-    public void setShipid(ShipDTO shipid) {
+    public void setShipid(Long shipid) {
         this.shipid = shipid;
     }
 }
