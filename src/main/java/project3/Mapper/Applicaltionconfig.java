@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Role;
 import project3.Mapper.Opject.*;
+import project3.entity.ImportProductsEntity;
 
 @Configuration
 public class Applicaltionconfig {
@@ -75,5 +76,22 @@ return new UserTokenMapper(modelMapper );
     @Bean
     public CategoryLV2Mapper categoryLV2Mapper(ModelMapper modelMapper){
         return new CategoryLV2Mapper(modelMapper );
+    }
+    @Bean
+    public ImportdetailsMapper importdetailsMapper(ModelMapper modelMapper){
+        return new ImportdetailsMapper(modelMapper );
+    }
+    @Bean
+    public ImportProductsMapper importProductsMapper(ModelMapper modelMapper){
+        return new ImportProductsMapper(modelMapper );
+    }
+
+    @Bean
+    public NewsMapper newsMapper(ModelMapper modelMapper){
+        return new NewsMapper(modelMapper );
+    }
+    @Bean
+    public BlackListMapper blackListMapper(ModelMapper modelMapper){
+        return new BlackListMapper(modelMapper );
     }
 }
