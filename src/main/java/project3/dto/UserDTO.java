@@ -1,5 +1,7 @@
 package project3.dto;
 
+import javax.persistence.Column;
+
 public class UserDTO {
     private  String userid;
     private String username;
@@ -10,7 +12,8 @@ public class UserDTO {
     private String email;
     private String images;
     private Long roleid;
-
+    private String gender;
+    private boolean status;
     public String getUserid() {
         return userid;
     }
@@ -81,5 +84,21 @@ public class UserDTO {
 
     public void setRoleid(Long roleid) {
         this.roleid = roleid;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }

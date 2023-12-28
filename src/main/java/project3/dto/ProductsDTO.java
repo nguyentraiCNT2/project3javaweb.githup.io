@@ -14,7 +14,7 @@ public class ProductsDTO {
     private Long categoryid;
     private Long categoryLV2id;
     private Long loveListid;
-
+    private boolean productsstatus;
     public Long getProductsid() {
         return productsid;
     }
@@ -101,5 +101,13 @@ public class ProductsDTO {
 
     public void setLoveListid(Long loveListid) {
         this.loveListid = loveListid;
+    }
+
+    public boolean isProductsstatus() {
+        return productsstatus;
+    }
+
+    public void setProductsstatus(boolean productsstatus) {
+        this.productsstatus = productsstatus;
     }
 }

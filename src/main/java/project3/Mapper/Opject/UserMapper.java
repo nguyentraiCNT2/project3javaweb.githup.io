@@ -24,6 +24,8 @@ public UserDTO maptoDTO (UserEntity entity){
     dto.setFirtname(entity.getFirtname());
     dto.setLastname(entity.getLastname());
     dto.setImages(entity.getImages());
+    dto.setGender(entity.getGender());
+    dto.setStatus(entity.isStatus());
     return dto;
 }
 
@@ -37,6 +39,8 @@ public UserDTO maptoDTO (UserEntity entity){
         entity.setFirtname(dto.getFirtname());
         entity.setLastname(dto.getLastname());
         entity.setImages(dto.getImages());
+        entity.setGender(dto.getGender());
+        entity.setStatus(dto.isStatus());
         return entity;
     }
 }

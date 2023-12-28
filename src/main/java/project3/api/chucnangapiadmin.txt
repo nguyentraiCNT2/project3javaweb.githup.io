@@ -1,0 +1,17 @@
+ // login - admin
+    //signup - admin
+    //profile - admin
+    //productmanager - product
+    //usermanager - user
+    //order - orer
+        //- đã đặt
+        //- đang giao
+        //- đã giao
+        //- đã hủy
+    //review - review
+    //ship - order
+    //role - user
+    //category - category
+    //categorylv2 - catergory
+    //customer - order
+    //import - import

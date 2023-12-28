@@ -12,7 +12,7 @@ public class ImportdetailsEntity {
     @ManyToOne
     @JoinColumn(name = "productsid")
     private ProductsEntity productsid;
-    @Column(name = "importdetailsid")
+    @Column(name = "importqty")
     private Long  importqty;
     @ManyToOne
     @JoinColumn(name = "importProductsid")

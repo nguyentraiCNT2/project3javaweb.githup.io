@@ -21,6 +21,8 @@ public class ProductsEntity {
     private Long productsview;
     @Column(name = "productsqltk")
     private Long productsqltk;
+    @Column(name = "productsqltk")
+    private boolean productsstatus;
     @ManyToOne
     @JoinColumn(name = "colorid")
     private ColorEntity colorid;
@@ -120,5 +122,13 @@ public class ProductsEntity {
 
     public void setLoveListid(LoveListEntity loveListid) {
         this.loveListid = loveListid;
+    }
+
+    public boolean getProductsstatus() {
+        return productsstatus;
+    }
+
+    public void setProductsstatus(boolean productsstatus) {
+        this.productsstatus = productsstatus;
     }
 }

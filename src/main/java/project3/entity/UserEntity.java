@@ -24,6 +24,10 @@ public class UserEntity {
     private String email;//actions
     @Column(name = "images")
     private String images;
+    @Column(name = "gender")
+    private String gender;
+    @Column(name = "status")
+    private boolean status;
     @ManyToOne
     @JoinColumn(name = "roleid")
     private RoleEntity roleid;//actions
@@ -98,5 +102,21 @@ public class UserEntity {
 
     public void setRoleid(RoleEntity roleid) {
         this.roleid = roleid;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }

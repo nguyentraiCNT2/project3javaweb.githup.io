@@ -17,6 +17,7 @@ public class Productsmapper {
         ProductsDTO dto = new ProductsDTO();
         dto.setProductsid(entity.getProductsid());
         dto.setProductcore(entity.getCore());
+        dto.setProductsstatus(entity.getProductsstatus());
         dto.setProductname(entity.getProductname());
         dto.setProductsview(entity.getProductsview());
         dto.setProductsqltk(entity.getProductsqltk());
@@ -32,6 +33,7 @@ public class Productsmapper {
         ProductsEntity entity = new ProductsEntity();
         entity.setProductsid(dto.getProductsid());
         entity.setCore(dto.getProductcore());
+        entity.setProductsstatus(dto.isProductsstatus());
         entity.setProductname(dto.getProductname());
         entity.setProductsview(dto.getProductsview());
         entity.setProductsqltk(dto.getProductsqltk());

@@ -10,7 +10,7 @@ public class ImportProductsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "importproductsid")
     private Long importproductsid;
-    @Column(name = "importproductsid")
+    @Column(name = "importdate")
     private Date importdate;
 
     public Long getImportproductsid() {

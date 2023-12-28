@@ -7,8 +7,8 @@ import javax.persistence.*;
 public class UserAddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "addressid")
-    private Long addressid;
+    @Column(name = "useraddressid")
+    private Long useraddressid;
     @Column(name = "useraddress",columnDefinition = "NVARCHAR(MAX)")
     private String useraddress;
     @Column(name = "status")
@@ -17,11 +17,11 @@ public class UserAddressEntity {
     @JoinColumn(name = "userid")
 private UserEntity userid;
     public Long getAddressid() {
-        return addressid;
+        return useraddressid;
     }
 
     public void setAddressid(Long addressid) {
-        this.addressid = addressid;
+        this.useraddressid = addressid;
     }
 
     public String getUseraddress() {
@@ -47,4 +47,5 @@ private UserEntity userid;
     public void setUserid(UserEntity userid) {
         this.userid = userid;
     }
+
 }
