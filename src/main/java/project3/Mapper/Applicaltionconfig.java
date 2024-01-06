@@ -3,19 +3,13 @@ package project3.Mapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Role;
 import project3.Mapper.Opject.*;
-import project3.entity.ImportProductsEntity;
 
 @Configuration
 public class Applicaltionconfig {
     @Bean
     public ModelMapper modelMapper() {
         return new ModelMapper();
-    }
-    @Bean
-    public UserTokenMapper userTokenMapper(ModelMapper modelMapper){
-return new UserTokenMapper(modelMapper );
     }
     @Bean
     public UserMapper userMapper(ModelMapper modelMapper){
@@ -80,10 +74,6 @@ return new UserTokenMapper(modelMapper );
     @Bean
     public ImportdetailsMapper importdetailsMapper(ModelMapper modelMapper){
         return new ImportdetailsMapper(modelMapper );
-    }
-    @Bean
-    public ImportProductsMapper importProductsMapper(ModelMapper modelMapper){
-        return new ImportProductsMapper(modelMapper );
     }
 
     @Bean

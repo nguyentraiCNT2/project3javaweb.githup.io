@@ -4,12 +4,11 @@ import java.math.BigDecimal;
 
 public class OrderdetailsDTO {
     private Long orderdetailid;
-    private Long orderid;
     private Long productsid;
     private Long totalamount;
     private BigDecimal unitprice;
     private Long shipid;
-
+    private  Long orderid;
     public Long getOrderdetailid() {
         return orderdetailid;
     }
@@ -17,15 +16,6 @@ public class OrderdetailsDTO {
     public void setOrderdetailid(Long orderdetailid) {
         this.orderdetailid = orderdetailid;
     }
-
-    public Long getOrderid() {
-        return orderid;
-    }
-
-    public void setOrderid(Long orderid) {
-        this.orderid = orderid;
-    }
-
 
     public Long getProductsid() {
         return productsid;
@@ -57,5 +47,13 @@ public class OrderdetailsDTO {
 
     public void setShipid(Long shipid) {
         this.shipid = shipid;
+    }
+
+    public Long getOrderid() {
+        return orderid;
+    }
+
+    public void setOrderid(Long orderid) {
+        this.orderid = orderid;
     }
 }

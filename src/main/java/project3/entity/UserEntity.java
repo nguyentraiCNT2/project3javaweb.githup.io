@@ -22,9 +22,9 @@ public class UserEntity {
     private String phone;
     @Column(name = "email")
     private String email;//actions
-    @Column(name = "images")
+    @Column(name = "images",columnDefinition = "NVARCHAR(MAX)")
     private String images;
-    @Column(name = "gender")
+    @Column(name = "gender",columnDefinition = "NVARCHAR(MAX)")
     private String gender;
     @Column(name = "status")
     private boolean status;
@@ -119,4 +119,6 @@ public class UserEntity {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
+
 }

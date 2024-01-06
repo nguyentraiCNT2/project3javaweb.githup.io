@@ -1,5 +1,7 @@
 package project3.entity;
 
+import lombok.Getter;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 @Entity
@@ -21,8 +23,23 @@ public class ProductsEntity {
     private Long productsview;
     @Column(name = "productsqltk")
     private Long productsqltk;
-    @Column(name = "productsqltk")
+    @Column(name = "productsstatus")
     private boolean productsstatus;
+    @Getter
+    @Column(name = "imagesmain")
+    private String imagesmain;
+    @Getter
+    @Column(name = "images2")
+    private String images2;
+    @Getter
+    @Column(name = "images3")
+    private String images3;
+    @Getter
+    @Column(name = "images4")
+    private String images4;
+    @Getter
+    @Column(name = "images5")
+    private String images5;
     @ManyToOne
     @JoinColumn(name = "colorid")
     private ColorEntity colorid;
@@ -130,5 +147,25 @@ public class ProductsEntity {
 
     public void setProductsstatus(boolean productsstatus) {
         this.productsstatus = productsstatus;
+    }
+
+    public void setImagesmain(String imagesmain) {
+        this.imagesmain = imagesmain;
+    }
+
+    public void setImages2(String images2) {
+        this.images2 = images2;
+    }
+
+    public void setImages3(String images3) {
+        this.images3 = images3;
+    }
+
+    public void setImages4(String images4) {
+        this.images4 = images4;
+    }
+
+    public void setImages5(String images5) {
+        this.images5 = images5;
     }
 }

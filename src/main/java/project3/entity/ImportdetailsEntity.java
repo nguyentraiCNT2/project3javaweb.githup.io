@@ -1,6 +1,8 @@
 package project3.entity;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
+import java.util.Date;
 
 @Entity
 @Table(name = "Importdetails")
@@ -14,9 +16,10 @@ public class ImportdetailsEntity {
     private ProductsEntity productsid;
     @Column(name = "importqty")
     private Long  importqty;
-    @ManyToOne
-    @JoinColumn(name = "importProductsid")
-    private ImportProductsEntity importProductsid;
+    @Column(name = "importdate")
+    private Date  importdate;
+    @Column(name = "importprice")
+    private BigDecimal importprice;
 
     public Long getImportdetailsid() {
         return importdetailsid;
@@ -42,11 +45,19 @@ public class ImportdetailsEntity {
         this.importqty = importqty;
     }
 
-    public ImportProductsEntity getImportProductsid() {
-        return importProductsid;
+    public Date getImportdate() {
+        return importdate;
     }
 
-    public void setImportProductsid(ImportProductsEntity importProductsid) {
-        this.importProductsid = importProductsid;
+    public void setImportdate(Date importdate) {
+        this.importdate = importdate;
+    }
+
+    public BigDecimal getImportprice() {
+        return importprice;
+    }
+
+    public void setImportprice(BigDecimal importprice) {
+        this.importprice = importprice;
     }
 }

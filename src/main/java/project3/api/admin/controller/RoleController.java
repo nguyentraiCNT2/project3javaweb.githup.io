@@ -7,13 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import project3.FunctionalAccessory.RandomId;
-import project3.FunctionalAccessory.TokenUtil;
-import project3.api.admin.service.RoleSerVice;
+import project3.service.RoleSerVice;
 import project3.api.output.RoleOutPut;
-import project3.api.output.UserOutput;
 import project3.dto.RoleDTO;
-import project3.dto.UserDTO;
 
 import javax.transaction.Transactional;
 
@@ -36,7 +32,6 @@ public class RoleController {
         result.setTotalPage((int) Math.ceil((double) (roleSerVice.totalItem()) / limit));
         model.addAttribute("userAccountOutput", result);
         return result;
-
     }
     @PostMapping("/admin/create-role")
     public ResponseEntity<String> createUser(@RequestBody RoleDTO roleDTO) {
@@ -47,7 +42,6 @@ public class RoleController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
     @PutMapping("/admin/update-role/{roleid}")
     public ResponseEntity<String> updateRole(@PathVariable Long roleid, @RequestBody RoleDTO roleDTO) {
         try {
@@ -60,9 +54,8 @@ public class RoleController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    // xóa dữ liệu
     @Transactional
-    @DeleteMapping("/admin/delete-role/{userid}")
+    @DeleteMapping("/admin/delete-role/{roleid}")
     public ResponseEntity<String> deleteUserAccount(@PathVariable Long roleid) {
         try {
             roleSerVice.deleteByRoleid(roleid);

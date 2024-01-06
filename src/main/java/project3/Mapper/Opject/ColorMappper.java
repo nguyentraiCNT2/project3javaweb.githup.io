@@ -3,9 +3,7 @@ package project3.Mapper.Opject;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import project3.dto.ColorDTO;
-import project3.dto.LoveListDTO;
 import project3.entity.ColorEntity;
-import project3.entity.LoveListEntity;
 
 @Component
 public class ColorMappper {

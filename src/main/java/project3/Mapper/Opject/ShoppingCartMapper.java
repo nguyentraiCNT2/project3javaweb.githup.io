@@ -3,9 +3,7 @@ package project3.Mapper.Opject;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import project3.dto.ShoppingCartDTO;
-import project3.dto.UserTokenDTO;
 import project3.entity.ShoppingCartEntity;
-import project3.entity.UserTokenEntity;
 
 @Component
 public class ShoppingCartMapper {

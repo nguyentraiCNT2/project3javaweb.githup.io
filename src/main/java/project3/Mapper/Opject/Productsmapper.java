@@ -2,9 +2,7 @@ package project3.Mapper.Opject;
 
 import org.modelmapper.ModelMapper;
 import project3.dto.ProductsDTO;
-import project3.dto.ReviewDTO;
 import project3.entity.ProductsEntity;
-import project3.entity.ReviewEntity;
 
 public class Productsmapper {
     private final ModelMapper modelMapper;
@@ -19,13 +17,19 @@ public class Productsmapper {
         dto.setProductcore(entity.getCore());
         dto.setProductsstatus(entity.getProductsstatus());
         dto.setProductname(entity.getProductname());
+        dto.setProductsdescribe(entity.getProductsdescribe());
         dto.setProductsview(entity.getProductsview());
         dto.setProductsqltk(entity.getProductsqltk());
         dto.setProductprice(entity.getProductprice());
-        dto.setColorid(entity.getColorid().getColorid());
-        dto.setCategoryid(entity.getCategoryid().getCategoryid());
-        dto.setCategoryLV2id(entity.getCategoryLV2id().getCategorylvid());
-        dto.setLoveListid(entity.getLoveListid().getLovelistid());
+        dto.setColorid(entity.getColorid() != null ? entity.getColorid().getColorid() : null );
+        dto.setCategoryid(entity.getCategoryid() != null ? entity.getCategoryid().getCategoryid() : null);
+        dto.setCategoryLV2id(entity.getCategoryLV2id() != null ? entity.getCategoryLV2id().getCategorylvid() : null);
+        dto.setLoveListid(entity.getLoveListid() != null ? entity.getLoveListid().getLovelistid() : null);
+        dto.setImagesmain(entity.getImagesmain());
+        dto.setImages2(entity.getImages2());
+        dto.setImages3(entity.getImages3());
+        dto.setImages4(entity.getImages4());
+        dto.setImages5(entity.getImages5());
         return dto;
     }
 
@@ -38,6 +42,12 @@ public class Productsmapper {
         entity.setProductsview(dto.getProductsview());
         entity.setProductsqltk(dto.getProductsqltk());
         entity.setProductprice(dto.getProductprice());
+        entity.setProductsdescribe(dto.getProductsdescribe());
+        entity.setImagesmain(dto.getImagesmain());
+        entity.setImages2(dto.getImages2());
+        entity.setImages3(dto.getImages3());
+        entity.setImages4(dto.getImages4());
+        entity.setImages5(dto.getImages5());
         return entity;
     }
 }

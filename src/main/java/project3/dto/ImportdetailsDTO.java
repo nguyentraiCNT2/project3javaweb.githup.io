@@ -3,14 +3,15 @@ package project3.dto;
 import project3.entity.ProductsEntity;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
+import java.util.Date;
 
 public class ImportdetailsDTO {
-
     private Long importdetailsid;
     private Long productsid;
     private Long  importqty;
-    private Long importProductsid;
-
+    private Date importdate;
+    private BigDecimal  importprice;
     public Long getImportdetailsid() {
         return importdetailsid;
     }
@@ -33,12 +34,19 @@ public class ImportdetailsDTO {
     public void setProductsid(Long productsid) {
         this.productsid = productsid;
     }
-
-    public Long getImportProductsid() {
-        return importProductsid;
+    public Date getImportdate() {
+        return importdate;
     }
 
-    public void setImportProductsid(Long importProductsid) {
-        this.importProductsid = importProductsid;
+    public void setImportdate(Date importdate) {
+        this.importdate = importdate;
+    }
+
+    public BigDecimal getImportprice() {
+        return importprice;
+    }
+
+    public void setImportprice(BigDecimal importprice) {
+        this.importprice = importprice;
     }
 }

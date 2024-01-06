@@ -9,7 +9,7 @@ public class ColorEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "colorid")
     private Long colorid;
-    @Column(name = "colorname")
+    @Column(name = "colorname",columnDefinition = "NVARCHAR(MAX)")
     private String colorname;
 
     public Long getColorid() {

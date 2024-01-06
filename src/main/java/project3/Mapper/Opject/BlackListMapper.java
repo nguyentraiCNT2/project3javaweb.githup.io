@@ -3,9 +3,7 @@ package project3.Mapper.Opject;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import project3.dto.BlackListDTO;
-import project3.dto.NewsDTO;
 import project3.entity.BlackListEntity;
-import project3.entity.NewsEntity;
 
 @Component
 public class BlackListMapper {

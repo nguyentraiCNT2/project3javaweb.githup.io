@@ -3,9 +3,7 @@ package project3.Mapper.Opject;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import project3.dto.LoveListDTO;
-import project3.dto.OrderdetailsDTO;
 import project3.entity.LoveListEntity;
-import project3.entity.OrderdetailsEntity;
 
 @Component
 public class LoveListMapper {
@@ -19,7 +17,7 @@ public class LoveListMapper {
         dto.setListdate(entity.getListdate());
         dto.setLovelistid(entity.getLovelistid());
         dto.setLovelistname(entity.getLovelistname());
-        dto.setUserid(entity.getUserid().getUserid());
+        dto.setUserid(entity.getUserid().getUserid() != null ? entity.getUserid().getUserid() : null);
         return dto;
     }
     public LoveListEntity maptoEntity (LoveListDTO dto){

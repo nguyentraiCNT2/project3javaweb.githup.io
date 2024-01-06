@@ -15,7 +15,7 @@ public class UserAddressEntity {
     private boolean status;
     @ManyToOne
     @JoinColumn(name = "userid")
-private UserEntity userid;
+    private UserEntity userid;
     public Long getAddressid() {
         return useraddressid;
     }

@@ -1,7 +1,6 @@
 package project3.api.output;
 
 import project3.dto.RoleDTO;
-import project3.dto.UserDTO;
 
 import java.util.ArrayList;
 import java.util.List;

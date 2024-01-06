@@ -10,9 +10,6 @@ public class OrderdetailsEntity {
     @Column(name = "orderdetailid")
     private Long orderdetailid;
     @ManyToOne
-    @JoinColumn(name = "orderid")
-    private OrderEntity orderid;
-    @ManyToOne
     @JoinColumn(name = "productsid")
     private ProductsEntity productsid;
     @Column(name = "totalamount")
@@ -22,6 +19,9 @@ public class OrderdetailsEntity {
     @ManyToOne
     @JoinColumn(name = "shipid")
     private ShipEntity shipid;
+    @ManyToOne
+    @JoinColumn(name = "orderid")
+    private OrderEntity orderid;
 
     public Long getOrderdetailid() {
         return orderdetailid;
@@ -31,13 +31,6 @@ public class OrderdetailsEntity {
         this.orderdetailid = orderdetailid;
     }
 
-    public OrderEntity getOrderid() {
-        return orderid;
-    }
-
-    public void setOrderid(OrderEntity orderid) {
-        this.orderid = orderid;
-    }
 
     public ProductsEntity getProductsid() {
         return productsid;
@@ -69,5 +62,13 @@ public class OrderdetailsEntity {
 
     public void setShipid(ShipEntity shipid) {
         this.shipid = shipid;
+    }
+
+    public OrderEntity getOrderid() {
+        return orderid;
+    }
+
+    public void setOrderid(OrderEntity orderid) {
+        this.orderid = orderid;
     }
 }

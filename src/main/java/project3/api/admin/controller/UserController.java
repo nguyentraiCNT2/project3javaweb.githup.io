@@ -7,13 +7,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import project3.FunctionalAccessory.RandomId;
-import project3.FunctionalAccessory.TokenUtil;
 import project3.api.output.UserOutput;
 import project3.dto.UserDTO;
-import project3.api.admin.service.UserService;
+import project3.service.UserService;
 
 import javax.transaction.Transactional;
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -57,7 +58,7 @@ public class UserController {
         model.addAttribute("userAccountOutput", result);
         return result;
     }
-    @GetMapping("/admin/user-by-id/{userId}")
+    @GetMapping("/admin/user-by-id/{userid}")
     public ResponseEntity<?> getByUserId(@PathVariable String userid) {
         try {
             UserDTO userDTO = userService.getByUserid(userid);
@@ -72,13 +73,8 @@ public class UserController {
         try {
             String randomId = RandomId.generateRandomId(25);
             userDTO.setUserid(randomId);
-            userDTO.setRoleid(1L);
             userService.createUser(userDTO);
-            String taikhoan = userDTO.getUsername();
-            String matkhau = userDTO.getPassword();// Thời gian hết hạn token, 1 giờ trong ví dụ này
-            long expirationMillis = 3600000;
-            String token = TokenUtil.generateToken(taikhoan,matkhau, expirationMillis);
-            return new ResponseEntity<>("more success " + token, HttpStatus.CREATED);
+            return new ResponseEntity<>("more success " , HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -109,4 +105,15 @@ public class UserController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    @PostMapping("/{userid}/upload-image")
+    public ResponseEntity<Void> uploadImage(@PathVariable String userid, @RequestParam("file") MultipartFile file) {
+        try {
+            userService.uploadImage(userid, file);
+            return ResponseEntity.ok().build();
+        } catch (IOException e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+
 }

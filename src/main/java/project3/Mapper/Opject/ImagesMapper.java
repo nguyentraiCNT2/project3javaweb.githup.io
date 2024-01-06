@@ -3,9 +3,7 @@ package project3.Mapper.Opject;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import project3.dto.ImagesDTO;
-import project3.dto.OrderdetailsDTO;
 import project3.entity.ImagesEntity;
-import project3.entity.OrderdetailsEntity;
 
 @Component
 public class ImagesMapper {

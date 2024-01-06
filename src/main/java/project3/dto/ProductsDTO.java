@@ -1,5 +1,6 @@
 package project3.dto;
 
+import javax.persistence.Column;
 import java.math.BigDecimal;
 
 public class ProductsDTO {
@@ -15,6 +16,16 @@ public class ProductsDTO {
     private Long categoryLV2id;
     private Long loveListid;
     private boolean productsstatus;
+
+    private String imagesmain;
+
+    private String images2;
+
+    private String images3;
+
+    private String images4;
+
+    private String images5;
     public Long getProductsid() {
         return productsid;
     }
@@ -109,5 +120,45 @@ public class ProductsDTO {
 
     public void setProductsstatus(boolean productsstatus) {
         this.productsstatus = productsstatus;
+    }
+
+    public String getImagesmain() {
+        return imagesmain;
+    }
+
+    public void setImagesmain(String imagesmain) {
+        this.imagesmain = imagesmain;
+    }
+
+    public String getImages2() {
+        return images2;
+    }
+
+    public void setImages2(String images2) {
+        this.images2 = images2;
+    }
+
+    public String getImages3() {
+        return images3;
+    }
+
+    public void setImages3(String images3) {
+        this.images3 = images3;
+    }
+
+    public String getImages4() {
+        return images4;
+    }
+
+    public void setImages4(String images4) {
+        this.images4 = images4;
+    }
+
+    public String getImages5() {
+        return images5;
+    }
+
+    public void setImages5(String images5) {
+        this.images5 = images5;
     }
 }

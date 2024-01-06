@@ -3,9 +3,7 @@ package project3.Mapper.Opject;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import project3.dto.UserAddressDTO;
-import project3.dto.UserTokenDTO;
 import project3.entity.UserAddressEntity;
-import project3.entity.UserTokenEntity;
 
 @Component
 public class UserAddressMapper {
@@ -20,16 +18,15 @@ public class UserAddressMapper {
         dto.setAddressid(entity.getAddressid());
         dto.setUseraddress(entity.getUseraddress());
         dto.setStatus(entity.isStatus());
-        dto.setUserid(entity.getUserid().getUserid());
+        dto.setUserid(entity.getUserid() != null ? entity.getUserid().getUserid() : null);
         return dto;
     }
 
     public UserAddressEntity maptoEntity (UserAddressDTO dto){
         UserAddressEntity entity = new UserAddressEntity();
-        dto.setAddressid(entity.getAddressid());
-        dto.setUseraddress(entity.getUseraddress());
-        dto.setStatus(entity.isStatus());
-        dto.setUserid(entity.getUserid().getUserid());
+        entity.setAddressid(dto.getAddressid());
+        entity.setUseraddress(dto.getUseraddress());
+        entity.setStatus(dto.isStatus());
         return entity;
     }
 }

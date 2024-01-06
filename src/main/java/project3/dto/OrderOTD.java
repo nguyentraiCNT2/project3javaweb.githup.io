@@ -74,4 +74,6 @@ public class OrderOTD {
     public void setUserid(String userid) {
         this.userid = userid;
     }
+
+
 }

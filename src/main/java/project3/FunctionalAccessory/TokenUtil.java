@@ -10,10 +10,10 @@ public class TokenUtil {
 
     private static final Key SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
-    public static String generateToken(String username,String password, long expirationMillis) {
+    public static String generateToken(String userid, long expirationMillis) {
         Date now = new Date();
         Date expirationDate = new Date(now.getTime() + expirationMillis);
-        String Data = "UserName: "+ username+"/n Password: "+password;
+        String Data = userid;
         return Jwts.builder()
                 .setSubject(Data)
                 .setIssuedAt(now)

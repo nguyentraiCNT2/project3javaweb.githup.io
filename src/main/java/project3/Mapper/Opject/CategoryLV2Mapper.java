@@ -3,9 +3,7 @@ package project3.Mapper.Opject;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import project3.dto.CategoryLV2DTO;
-import project3.dto.ColorDTO;
 import project3.entity.CategoryLV2Entity;
-import project3.entity.ColorEntity;
 
 @Component
 public class CategoryLV2Mapper {

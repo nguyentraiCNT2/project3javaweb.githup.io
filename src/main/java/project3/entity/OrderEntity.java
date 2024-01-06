@@ -12,7 +12,7 @@ public class OrderEntity {
     @Column(name = "orderqty")
     private Long orderqty;
     @Column(name = "orderdate")
-    private Date orderdate;
+        private Date orderdate;
     @Column(name = "deliverydate")
     private Date deliverydate;
     @Column(name = "orderstatus",columnDefinition = "NVARCHAR(MAX)")
@@ -87,4 +87,5 @@ public class OrderEntity {
     public void setUserid(UserEntity userid) {
         this.userid = userid;
     }
+
 }

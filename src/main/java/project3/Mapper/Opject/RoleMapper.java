@@ -3,9 +3,7 @@ package project3.Mapper.Opject;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import project3.dto.RoleDTO;
-import project3.dto.UserDTO;
 import project3.entity.RoleEntity;
-import project3.entity.UserEntity;
 
 @Component
 public class RoleMapper {
